@@ -19,12 +19,5 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/login").setViewName("login");
     }
     
-public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    
-        registry.addResourceHandler("/resource/**").addResourceLocations(
-                "/resource/");
-    
-    
 
- }
 }
