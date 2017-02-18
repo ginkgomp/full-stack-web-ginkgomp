@@ -3,13 +3,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
      
-        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{../webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{../static/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
         
-        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{../webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{../static/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
       
-        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-social.css" data-th-href="@{../webjars/bootstrap/3.3.1/css/bootstrap-social.css}" rel="stylesheet" />
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-social.css" data-th-href="@{../static/webjars/bootstrap/3.3.1/css/bootstrap-social.css}" rel="stylesheet" />
         
-          <link type="text/css" href="../static/styles/main.css" data-th-href="@{../styles/main.css}" rel="stylesheet" /> 
+          <link type="text/css" href="../static/styles/main.css" data-th-href="@{../static/styles/main.css}" rel="stylesheet" /> 
         
         <title>Pet-friendly Public Locations</title>
     </head>
@@ -22,7 +22,7 @@
               <ul class="media-list" >  
                   <li class="media" data-th-each="location : ${locations}">
                   <div class="media-left middle-middle">
-                   <img class="media-object img-thumbnail" src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{../image/Hueston_Woods_Dog_Camping.jpg}" alt="Huston Woods" />
+                   <img class="media-object img-thumbnail" src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{../static/image/Hueston_Woods_Dog_Camping.jpg}" alt="Huston Woods" />
                   </div>      
                   <div class="media-body">
                       <h3 class="media-heading" data-th-text="${location.locationName}">
