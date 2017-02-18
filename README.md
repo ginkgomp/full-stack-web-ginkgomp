@@ -1,5 +1,11 @@
 # YukiAndYuto
 
+## Summary Changes
+  Created a Location entity, a Location Reposity, a REST web service for location and Location Controller. Also, a welcome page, a login page and a page listing pet-friendly locations created.   
+
+___
+
+
 1. What is the proposed name for your Web application?
     * YukiAndYuto  (it’s my two dogs name)
 2. Who is the target audience for your Web application?
@@ -23,7 +29,8 @@
 ## Web Site
 
 [YukiAndYuto](https://young-shore-19904.herokuapp.com/)
-![](https://...)
+
+![](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/blob/master/src/main/resources/image/logo.png)
 
 ## Key Features
 
