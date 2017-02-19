@@ -37,13 +37,14 @@ public class Location {
     protected LocationType locationType;
     protected String address;
     protected String description;
-   
+
 
     public Location() {
         this.id = Long.MAX_VALUE;
         this.locationName = null;
         this.locationType = LocationType.Unknown;
         this.address = null;
+        this.description = null;
     }
 
     public Location(Long id, String locationName, LocationType locationType, String address, String description) {
