@@ -37,6 +37,7 @@ public class Location {
     protected LocationType locationType;
     protected String address;
     protected String description;
+    protected String imgName;
 
 
     public Location() {
@@ -45,20 +46,22 @@ public class Location {
         this.locationType = LocationType.Unknown;
         this.address = null;
         this.description = null;
+        this.imgName = null;
     }
 
-    public Location(Long id, String locationName, LocationType locationType, String address, String description) {
+    public Location(Long id, String locationName, LocationType locationType, String address, String description, String imgName) {
       this.id = id;
       this.locationName = locationName;
       this.locationType = locationType;
       this.address = address;
       this.description = description;
+      this.imgName = imgName;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address +  ",description=" + this.description + " ]";
+        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address +  ",description=" + this.description +  ", imgName=" + this.imgName + " ]";
     }
 
     @Override
@@ -140,6 +143,20 @@ public class Location {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+    
+    /**
+     * @return the imgName
+     */
+    public String getImgName() {
+        return imgName;
+    }
+
+    /**
+     * @param address the address to set
+     */
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
     }
 
 

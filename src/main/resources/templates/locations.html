@@ -22,7 +22,7 @@
                       <ul class="media-list">  
                           <li class="media" data-th-each="location : ${locations}">
                           <div class="media-left">
-                           <img class="media-object img-thumbnail" src="/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" alt="I will add image variable later" width="200px"/>
+                           <img class="media-object img-thumbnail" data-th-src="@{/image/location.imgName}" data-th-alt="${location.imgName}" width="200px"/>
                           </div>      
                           <div class="media-body">
                               <h3 class="media-heading" data-th-text="${location.locationName}"></h3>
@@ -50,6 +50,7 @@
                         <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
                         Provide Address: <input type="text" name="address" /> <br />
                         Provide Description: <textarea name="description"></textarea> <br />
+                        Upload an image: <input type="file" name="imgName" /><br />
                         <input type="submit" value="Add Location"/><br />
                     </form>
 
