@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     
+      <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+
+   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+        
+    <link href="../static/css/main.css" data-th-href="@{css/main.css}" rel="stylesheet" media="screen" />
+    
+   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
+    
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+   
+        
+    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{js/lib/jquery.lavalamp.min.js}"></script>
+        
+        
+        <title>Pet-friendly Public Locations</title>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">    
+                
+                <h1>Upload Status</h1>
+                <h2>Message : ${message}</h2> 
+                
+            </div>
+
+        <hr />
+            <div class="row">   
+                <div class="col-xs-12">
+                    Add Pet-friendly Public Locations:<br />
+                <form method="POST" action="${pageContext.request.contextPath}/upload" enctype="multipart/form-data">
+                    <input type="file" name="file" /><br/>
+                    <input type="submit" value="Submit" />
+                </form>
+
+                    <hr />
+                    <form data-th-action="@{/logout}" method="post">
+                        <input type="submit" value="Sign Out"/>
+                    </form>
+                </div> 
+            </div>
+    </div>
+    </body>
+</html>
+

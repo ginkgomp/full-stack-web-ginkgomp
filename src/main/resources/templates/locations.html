@@ -42,18 +42,14 @@
                           </li>      
                       </ul>
                 </div>  
-                <div class="col-xs-12">
-                <li data-th-each="file : ${files}">
-                    <a data-th-href="${file}" data-th-text="${file}" />
-                    </li>
-                </div>
+                
             </div>
 
         <hr />
             <div class="row">   
                 <div class="col-xs-12">
                     Add Pet-friendly Public Locations:<br />
-                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post" enctype="multipart/form-data" action="/">
+                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post">
                         Location Name: <input type="text" name="locationName" /><br />
                         Location Type:<br />
                         <input type="radio" name="locationType" value="Unknown" checked="checked" /> Unknown<br />
