@@ -19,8 +19,7 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 
-@Configuration
-@EnableAutoConfiguration
+
 @SpringBootApplication
 public class FullStackWebApplication {
 
