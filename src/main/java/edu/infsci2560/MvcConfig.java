@@ -1,7 +1,9 @@
 package edu.infsci2560;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -27,5 +29,21 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     registry.addResourceHandler("/**").addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/",
 		"classpath:/static/");  
   }
+    
+    @Bean
+    public CommonsMultipartResolver multipartResolver() {
+    	CommonsMultipartResolver resolver=new CommonsMultipartResolver();
+       return resolver;
+    }
+    
+    @Bean
+	CommandLineRunner init(StorageService storageService) {
+		return (args) -> {
+            storageService.deleteAll();
+            storageService.init();
+		};
+	}
+    
+    
 
 }
