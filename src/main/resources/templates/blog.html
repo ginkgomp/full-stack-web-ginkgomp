@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     
+      <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+
+   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+        
+    <link href="../static/css/main.css" data-th-href="@{css/main.css}" rel="stylesheet" media="screen" />
+    
+    <link href="../static/css/blog.css" data-th-href="@{css/blog.css}" rel="stylesheet" media="screen" />
+    
+   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
+    
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+   
+        
+    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{js/lib/jquery.lavalamp.min.js}"></script>
+        
+        
+        <title>Blogs</title>
+    </head>
+    
+    
+    <body>
+          <div class="container">
+            <div class="row">
+        <header class="text-center">
+         <img class="img-fluid" src="../static/image/logo%20-large.png" data-th-src="@{/image/logo%20-large.png}" alt="logo"/>
+        </header>
+            </div>    
+      <nav class="navbar text-center">
+         <ul id="navlist">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about.html">Photos</a></li>
+            <li><a href="/services.html">Videos</a></li>
+            <li><a href="/programs.html">Blog</a></li>
+            <li><a data-th-href="@{/locations}">Ideas</a></li>
+            <li><a href="/programs.html">Friends</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+  </nav> 
+        </div> 
+        <div class="container">
+            <div class="row">    
+                 
+                <nav class="breadcrumb">
+                  <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
+                  <span class="breadcrumb-item active">Blog</span>
+                </nav>
+                
+                <div class="col-xs-2">
+                      <h2>add sth later</h2>
+                </div>  
+                
+                <div class="col-xs-10" id="blogsidebar">
+                    <h2>
+                    $Blog Post Title
+                </h2>
+                <p class="lead">
+                    by $Author
+                </p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
+                <hr/>
+                <img class="img-responsive" src="../static/image/Hueston_Woods_Dog_Camping.jpg" width="500" alt="">
+                <hr/>
+                <p>$content</p>
+                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                <hr/>
+                </div> 
+            </div>
+    </div>
+    </body>
+</html>
+
