@@ -126,7 +126,7 @@
         {
 			"name": "Get Blog",
 			"request": {
-				"url": "http://localhost:5000/public/api/blog",
+				"url": "http://localhost:5000/public/api/blogs",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -137,7 +137,7 @@
 		{
 			"name": "Add Blog",
 			"request": {
-				"url": "http://localhost:5000/public/api/blog",
+				"url": "http://localhost:5000/public/api/blogs",
 				"method": "POST",
 				"header": [
 					{
