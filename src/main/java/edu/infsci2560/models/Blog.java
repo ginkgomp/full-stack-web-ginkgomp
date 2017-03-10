@@ -21,25 +21,29 @@ public class Blog {
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
+    protected String author;
     protected String content;
 
 
     public Blog() {
         this.id = Long.MAX_VALUE;
         this.title = null;
+        this.author = null;
         this.content = null;
     }
 
-    public Blog(Long id, String title, String content) {
+    public Blog(Long id, String title, String author, String content) {
       this.id = id;
       this.title = title;
+      this.author = author;
       this.content = content;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", content=" + this.content + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", author=" + this.author +  ", content=" + this.content + " ]";
+       
     }
 
     @Override
@@ -66,6 +70,19 @@ public class Blog {
         this.title = title;
     }
 
+    /**
+     * @return the author
+     */
+    public String getAuthor() {
+        return author;
+    }
+
+    /**
+     * @param author the author to set
+     */
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
     /**
      * @return the id
