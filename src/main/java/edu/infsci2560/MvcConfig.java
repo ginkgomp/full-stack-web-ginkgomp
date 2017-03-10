@@ -33,19 +33,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		"classpath:/static/");  
   }
     
-    @Bean
-    public CommonsMultipartResolver multipartResolver() {
-    	CommonsMultipartResolver resolver=new CommonsMultipartResolver();
-       return resolver;
-    }
     
-    @Bean
-	CommandLineRunner init(StorageService storageService) {
-		return (args) -> {
-            storageService.deleteAll();
-            storageService.init();
-		};
-	}
+    
     
     
 
