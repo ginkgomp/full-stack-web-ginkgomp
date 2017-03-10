@@ -33,8 +33,8 @@ public class FullStackWebApplication {
         repository.save(new Location(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA", "A public park in Urban Pittsburgh, allow pets."));
         repository.save(new Location(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA","A hotel which is pet-friendly, try to spend a great time with your dogs here! "));
     
-        ApplicationContext ctx1 = SpringApplication.run(FullStackWebApplication.class, args);
-        BlogRepository repositoryb = ctx1.getBean(BlogRepository.class);
+        
+        BlogRepository repositoryb = ctx.getBean(BlogRepository.class);
         repositoryb.save(new Blog(1L,"Blog#1","Author1","xxxxxxxx"));
         repositoryb.save(new Blog(2L,"Blog#2","Author1","xxxxxxxx"));
         
