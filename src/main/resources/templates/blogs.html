@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="col-xs-10" id="blogsidebar">
-                    <li data-th-each="blog : ${blogs}">
+                <li data-th-each="blog : ${blogs}">
                     <h2 data-th-text="${blog.title}"></h2>
                 <p class="lead" data-th-text="${blog.author}"> By</p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
@@ -80,7 +80,7 @@
                         <label for="author">Author:</label>
                         <input type="text" name="author" /> <br />
                         <label for="content">Content:</label>
-                       <textarea name="description"></textarea> <br />
+                       <textarea name="content"></textarea> <br />
                         <!--
                         Image to upload: <input type="file" name="location" /> <br />
                         -->
