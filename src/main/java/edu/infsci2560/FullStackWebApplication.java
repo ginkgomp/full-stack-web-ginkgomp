@@ -77,8 +77,5 @@ public class FullStackWebApplication {
 //        };
 //    }
     
-    @Bean
-    public MultipartResolver multipartResolver() {
-        return new StandardServletMultipartResolver();
-    }
+    
 }
