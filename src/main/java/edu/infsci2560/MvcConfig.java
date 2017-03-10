@@ -23,26 +23,26 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/").setViewName("home");
         registry.addViewController("/locations").setViewName("locations");
-        registry.addViewController("/blog").setViewName("blog");
+        registry.addViewController("/blogs").setViewName("blogs");
         registry.addViewController("/login").setViewName("login");
-        
+
     }
-    
-    
+
+
     @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
     registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-      
+
     registry.addResourceHandler("/**").addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/",
-		"classpath:/static/");  
+		"classpath:/static/");
   }
-    
-    
-    
+
+
+
     @Bean
     public MultipartResolver multipartResolver() {
         return new StandardServletMultipartResolver();
     }
-    
+
 
 }

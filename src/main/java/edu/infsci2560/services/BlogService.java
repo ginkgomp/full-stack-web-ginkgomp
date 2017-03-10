@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Wenwen Sun
  */
 @RestController
-@RequestMapping("/public/api/blog")
+@RequestMapping("/public/api/blogs")
 public class BlogService {
 
     @Autowired

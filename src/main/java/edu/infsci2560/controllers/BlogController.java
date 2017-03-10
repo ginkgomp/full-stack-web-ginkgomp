@@ -24,15 +24,15 @@ public class BlogController {
     @Autowired
     private BlogRepository repository;
 
-    @RequestMapping(value = "blog", method = RequestMethod.GET)
+    @RequestMapping(value = "blogss", method = RequestMethod.GET)
     public ModelAndView index() {
-        return new ModelAndView("blog", "blog", repository.findAll());
+        return new ModelAndView("blogs", "blogs", repository.findAll());
     }
 
-    @RequestMapping(value = "blog/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "blogs/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Blog blog, BindingResult result) {
         repository.save(blog);
-        return new ModelAndView("blog", "blog", repository.findAll());
+        return new ModelAndView("blogs", "blogs", repository.findAll());
     }
 
 }
