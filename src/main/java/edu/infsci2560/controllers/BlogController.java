@@ -24,7 +24,7 @@ public class BlogController {
     @Autowired
     private BlogRepository repository;
 
-    @RequestMapping(value = "blogss", method = RequestMethod.GET)
+    @RequestMapping(value = "blogs", method = RequestMethod.GET)
     public ModelAndView index() {
         return new ModelAndView("blogs", "blogs", repository.findAll());
     }
