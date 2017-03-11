@@ -35,6 +35,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
     registry.addResourceHandler("/**").addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/",
 		"classpath:/static/").setCachePeriod(31556926);
+      
+    registry.addResourceHandler("/webjars").addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/",
+		"classpath:/static/").setCachePeriod(31556926);
   }
 
 
