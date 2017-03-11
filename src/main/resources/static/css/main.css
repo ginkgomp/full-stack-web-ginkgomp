@@ -23,3 +23,13 @@ body{
     font-size: 1.4em;
 }
 
+.breadcrumb :before {
+    color: #ccc;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+.breadcrumb{
+    background: none;
+    font-size: 1.1em;
+}

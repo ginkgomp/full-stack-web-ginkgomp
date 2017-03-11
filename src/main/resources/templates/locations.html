@@ -31,17 +31,22 @@
             </div>
       <nav class="navbar text-center">
          <ul id="navlist">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a data-th-href="@{/home}">Home</a></li>
             <li><a href="">Photos</a></li>
             <li><a href="">Videos</a></li>
             <li><a data-th-href="@{/blogs}">Blog</a></li>
-            <li><a data-th-href="@{/locations}">Ideas</a></li>
+            <li class="active"><a data-th-href="@{/locations}">Ideas</a></li>
             <li><a href="">Friends</a></li>
             <li><a href="">Contact</a></li>
         </ul>
   </nav>
         
-            <div class="row">    
+            <div class="row">  
+                 <nav class="breadcrumb">
+                  <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
+                  <span class="breadcrumb-item active">Ideas</span>
+                </nav>
+                
                 <h1> Pet-friendly Public Location Lists </h1>
 
                 <div class="col-xs-12">
