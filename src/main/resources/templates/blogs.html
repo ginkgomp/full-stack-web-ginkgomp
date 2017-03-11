@@ -55,29 +55,21 @@
                       <h2>add sth later</h2>
                 </div>
 
-        
                 <div class="col-xs-10" id="blogsidebar">
-                <li data-th-each="blog :${blogs}">
+                    <li data-th-each="blog :${blogs}">
                     <h2 data-th-text="${blog.title}"></h2>
-                <p class="lead" data-th-text="${blog.author}"> By</p>
+                <p class="lead" data-th-text="${blog.author}"></p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
                 <hr/>
-                <img class="img-responsive" src="../static/image/Hueston_Woods_Dog_Camping.jpg" width="500" alt="" />
+                <img class="img-responsive" src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" width="500" alt="" />
                 <hr/>
                 <p data-th-text="${blog.content}"></p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr/>
-                </li>
+                    </li>
                 </div>
-            
-            </div>  
-                
-            
-            
-
-                
-        
+            </div>
           <hr />
              <div class="row">
                 <div class="col-xs-12">
@@ -88,7 +80,7 @@
                         <label for="author">Author:</label>
                         <input type="text" name="author" /> <br />
                         <label for="content">Content:</label>
-                       <textarea name="content"></textarea> <br />
+                       <textarea name="description"></textarea> <br />
                         <!--
                         Image to upload: <input type="file" name="location" /> <br />
                         -->
@@ -102,17 +94,5 @@
                 </div>
             </div>
       </div>
-        
-        
-         <script type="text/javascript">
-    $(document).ready(function() {
-
-        $('#navlist').lavalamp({
-    easing: 'easeOutBack',
-    margins:true
-});
-    });
-
-    </script>
     </body>
 </html>
