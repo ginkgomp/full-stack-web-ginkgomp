@@ -11,13 +11,13 @@
 
     <link href="../static/css/blog.css" data-th-href="@{/css/blog.css}" rel="stylesheet" media="screen" />
 
-   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{/css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
+   
 
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
 
 
-    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{/js/lib/jquery.lavalamp.min.js}"></script>
+
 
 
         <title>Blogs</title>
@@ -25,24 +25,7 @@
 
 
     <body>
-          <div class="container">
-            <div class="row">
-        <header class="text-center">
-         <img class="img-fluid" src="../static/image/logo%20-large.png" data-th-src="@{/image/logo%20-large.png}" alt="logo"/>
-        </header>
-            </div>
-      <nav class="navbar text-center">
-         <ul id="navlist">
-            <li><a data-th-href="@{/home}">Home</a></li>
-            <li><a href="">Photos</a></li>
-            <li><a href="">Videos</a></li>
-            <li class="active"><a data-th-href="@{/blogs}">Blog</a></li>
-            <li><a data-th-href="@{/locations}">Ideas</a></li>
-            <li><a href="">Friends</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-  </nav>
-        </div>
+          <div id="header"></div><br />
         <div class="container">
             <div class="row">
 
@@ -94,5 +77,23 @@
                 </div>
             </div>
       </div>
+        <script>
+ 
+     $("#header").load("header.html");
+    
+  
+
+  
+</script>
+        <script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#navlist').lavalamp({
+    easing: 'easeOutBack',
+    margins:true
+});
+    });
+
+    </script>
     </body>
 </html>

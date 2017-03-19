@@ -2,9 +2,11 @@ package edu.infsci2560;
 
 import edu.infsci2560.models.Location;
 import edu.infsci2560.models.Blog;
+import edu.infsci2560.models.Event;
 import edu.infsci2560.models.Location.LocationType;
 import edu.infsci2560.repositories.LocationRepository;
 import edu.infsci2560.repositories.BlogRepository;
+import edu.infsci2560.repositories.EventRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +34,10 @@ public class FullStackWebApplication {
         BlogRepository repositoryb = ctx.getBean(BlogRepository.class);
         repositoryb.save(new Blog(1L,"Blog#1","Author1","xxxxxxxx"));
         repositoryb.save(new Blog(2L,"Blog#2","Author1","xxxxxxxx"));
+        
+        EventRepository repositorye = ctx.getBean(EventRepository.class);
+        repositorye.save(new Event(1L,"Yuki's Birth","2015-03-07","On March 7th, 2015, our little angel(sometimes can be an evil) -- Yuki was born."));
+        repositorye.save(new Event(1L,"Yuto's Birth","2015-03-16","Yuto's birthday is on March 16th. As a Golden Retriever, she is so cute and lovely."));        
         
         
     }
