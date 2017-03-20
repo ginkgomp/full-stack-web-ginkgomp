@@ -44,7 +44,7 @@ public class FullStackWebApplication {
         repositorye.save(new Event(6L,"1st Birthday","2016-03-11","We celebrate their birthday together, eating cakes that has designated designs for them."));
         repositorye.save(new Event(7L,"First Time Boarding","2016-03-20","While we head to San Franciso for Spring Break, they spend first week away from us, boarding with other dogs."));
         repositorye.save(new Event(8L,"Move to Pittsburgh","2016-08-09","We move to pittsburgh for school they move to pittsburgh for fun"));
-        repositorye.save(new Event(9L,"Two Years Old","2016-08-09","They turn to two while are as cute as the little puppies first brought into our family"));
+        repositorye.save(new Event(9L,"Two Years Old","2017-03-07","They turn to two while are as cute as the little puppies first brought into our family"));
         		
         
     }
