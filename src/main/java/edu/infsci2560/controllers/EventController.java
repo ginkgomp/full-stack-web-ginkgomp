@@ -29,10 +29,6 @@ public class EventController {
        return new ModelAndView("photos", "photos", repository.findAll());
    }
 
-   @RequestMapping(value = "photos/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid Event event, BindingResult result) {
-        repository.save(event);
-        return new ModelAndView("photos", "photos", repository.findAll());
-    }
+  
 
 }
