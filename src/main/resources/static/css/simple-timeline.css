@@ -4,17 +4,14 @@
 
 @import "foundation.css";
 
-/*
-@import url("//fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
-@import url("//fonts.googleapis.com/css?family=PT+Sans");
-*/
+
 
 /*Styling fonts*/
 
 @font-face {
     font-family: 'Open Sans Condensed';
     font-style: normal;
-  font-weight: 300;
+    font-weight: 300;
     src: url(fonts/gk5FxslNkTTHtojXrkp-xE6du99w8ONfQrOf4kprgAx_v5H-gcmDugi2HQeB0BPm.woff2) format('woff2');
 }
 
