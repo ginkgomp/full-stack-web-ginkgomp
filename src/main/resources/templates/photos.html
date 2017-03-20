@@ -29,8 +29,7 @@
         </nav>
     </div>
 <h1 style="margin:10px auto 30px auto; text-align:center">Yuki &amp; Yuto's Growth Timeline</h1>
-    <div data-th-replace="events :: html"></div>
-    <!--test
+    
 <div class='flash'>
                 
               <button class='yselect' id='yprev'>-</button>
@@ -64,8 +63,8 @@
                             <button class='dselect' id='dprev'>-</button>
                           </div>
                         </div>
-                        <div data-th-each="event :${events}">   
-                            <div class="col-xs-10 row tlcontainer" data-date="${event.eventDate}">
+                        <div class="col-xs-10 row" data-th-each="event :${events}">   
+                            <div class="tlcontainer" data-date="2015-03-07">
                                 <div class="col-xs-4">
                                  <img src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" class="image" alt="" width="200" />
                                 </div>
@@ -85,7 +84,7 @@
               </div>
       
 </div>
-    -->
+
       <hr />
       <div class="row1">
           <div class="col-xs-10">

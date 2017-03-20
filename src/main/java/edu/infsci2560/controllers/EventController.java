@@ -24,15 +24,15 @@ public class EventController {
 	@Autowired
     private EventRepository repository;
 	
-   @RequestMapping(value = "events", method = RequestMethod.GET)
+   @RequestMapping(value = "photos", method = RequestMethod.GET)
    public ModelAndView index() {
-       return new ModelAndView("events", "events", repository.findAll());
+       return new ModelAndView("events", "photos", repository.findAll());
    }
 
-   @RequestMapping(value = "events/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+   @RequestMapping(value = "photos/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Event event, BindingResult result) {
         repository.save(event);
-        return new ModelAndView("events", "events", repository.findAll());
+        return new ModelAndView("events", "photos", repository.findAll());
     }
 
 }
