@@ -24,9 +24,9 @@ public class EventController {
 	@Autowired
     private EventRepository repository;
 	
-   @RequestMapping(value = "photos", method = RequestMethod.GET)
+   @RequestMapping(value = "events", method = RequestMethod.GET)
    public ModelAndView index() {
-       return new ModelAndView("photos", "events", repository.findAll());
+       return new ModelAndView("events", "events", repository.findAll());
    }
 
    
