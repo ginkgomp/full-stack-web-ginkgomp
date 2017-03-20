@@ -32,18 +32,18 @@
                             <button class='dselect' id='dprev'>-</button>
                           </div>
                         </div>
-                        <li >   
-                            <div class="col-xs-10 row tlcontainer" data-date="2015-03-07">
+                        <div class="col-xs-10 row" data-th-each="event :${events}">   
+                            <div class="tlcontainer" data-date="2015-03-07">
                                 <div class="col-xs-4">
                                  <img src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" class="image" alt="" width="200" />
                                 </div>
                                 <div class="col-xs-8">
-                                  <p class="eventTitle">Yuki's birth</p><br/>
-                                  <h5 class="eventDate" >2015-03-07</h5>
-                                  <p class="eventContent" >Yuki is a little dog</p>
+                                  <p class="eventTitle" data-th-text="${event.eventTitle}"></p><br/>
+                                  <h5 class="eventDate" data-th-text="${event.eventDate}"></h5>
+                                  <p class="eventContent" data-th-text="${event.eventContent}"></p>
                                 </div>
                            </div>
-                        </li>
+                        </div>
                         <div class="col-xs-1">
                           <div class='dbuttons'>
                             <button class ='dselect' id='dnext'>></button>
