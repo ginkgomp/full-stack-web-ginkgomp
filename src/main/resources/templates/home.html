@@ -25,41 +25,21 @@
 
 
     <body style="background-color: aliceblue; margin: 20px 20px;">
-        <div class="container">
-            <div class="row">
-        <header class="text-center">
-         <img class="img-fluid" src="../static/image/logo%20-large.png" data-th-src="@{/image/logo%20-large.png}" alt="logo"/>
-        </header>
-            </div>
-      <nav class="navbar text-center">
-         <ul id="navlist">
-            <li class="active"><a data-th-href="@{/home}">Home</a></li>
-            <li><a ata-th-href="@{/photos}">Photos</a></li>
-            <li><a href="">Videos</a></li>
-            <li><a data-th-href="@{/blogs}">Blog</a></li>
-            <li><a data-th-href="@{/locations}">Ideas</a></li>
-            <li><a href="">Friends</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-  </nav>
-        </div>
-
+        <div id="header"></div>
 
         <p>Click <a data-th-href="@{/account}">here</a> to Log in your account!</p>
 
     
 
 
-        <script type="text/javascript">
-    $(document).ready(function() {
+<script>
+ 
+     $("#header").load("header.html");
+    
+  
 
-        $('#navlist').lavalamp({
-    easing: 'easeOutBack',
-    margins:true
-});
-    });
-
-    </script>
+  
+</script>
 
     </body>
 </html>
