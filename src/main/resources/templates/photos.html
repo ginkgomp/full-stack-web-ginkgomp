@@ -63,8 +63,8 @@
                             <button class='dselect' id='dprev'>-</button>
                           </div>
                         </div>
-                        <div class="col-xs-10 row tlcontainer" data-th-each="photo :${photos}">   
-                            <li data-th-attr="data-date=${photo.eventDate}">
+                        <div class="col-xs-10 row tlcontainer" data-th-each="photo :${photos}" data-th-attr="data-date=${photo.eventDate}">   
+                          
                                 <div class="col-xs-4">
                                  <img src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" class="image" alt="" width="200" />
                                 </div>
@@ -73,7 +73,7 @@
                                   <h5 class="eventDate" data-th-text="${photo.eventDate}"></h5>
                                   <p class="eventContent" data-th-text="${photo.eventContent}"></p>
                                 </div>
-                           </li>
+                          
                         </div>
                         <div class="col-xs-1">
                           <div class='dbuttons'>
