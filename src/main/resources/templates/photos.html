@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<div data-th-include="@{/header}"></div>
+<div data-th-replace="header :: div"></div>
 
     <div class="container">
         <nav class="breadcrumb">
@@ -97,7 +97,7 @@
 <script src="../static/js/lib/simple-timeline.jquery.js" data-th-src="@{/js/lib/simple-timeline.jquery.js}"></script> 
 <script>
  
-     $("#header").load("header.html");
+    
   $('div.tlcontainer').simpleTimeline();
     
   
