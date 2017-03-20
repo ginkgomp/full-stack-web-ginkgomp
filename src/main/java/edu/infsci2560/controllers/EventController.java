@@ -26,13 +26,13 @@ public class EventController {
 	
    @RequestMapping(value = "photos", method = RequestMethod.GET)
    public ModelAndView index() {
-       return new ModelAndView("events", "photos", repository.findAll());
+       return new ModelAndView("photos", "photos", repository.findAll());
    }
 
    @RequestMapping(value = "photos/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Event event, BindingResult result) {
         repository.save(event);
-        return new ModelAndView("events", "photos", repository.findAll());
+        return new ModelAndView("photos", "photos", repository.findAll());
     }
 
 }
