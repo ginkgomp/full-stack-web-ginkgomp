@@ -58,18 +58,8 @@
                   </a>
                 </div>
                 <div class="col-xs-2">
-                  <p>Account Sign in: </p>
-                    <div data-th-if="${param.error}">
-                        Invalid username and password.
-                    </div>
-                    <div data-th-if="${param.logout}">
-                        You have been logged out.
-                    </div>
-                    <form data-th-action="@{/login}" method="post">
-                        <div><label> User Name: <input type="text" name="username"/> </label></div>
-                        <div><label> Password: <input type="password" name="password"/> </label></div>
-                        <div><input type="submit" value="Sign In"/></div>
-                    </form>
+                  <p>Click <a data-th-href="@{/account}">here</a> to Log in your account!</p>
+                    
                 </div>  
              </div>
                 <br />
