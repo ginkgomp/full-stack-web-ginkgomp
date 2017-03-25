@@ -65,9 +65,15 @@
                         <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
                         Provide Address: <input type="text" name="address" /> <br />
                         Provide Description: <textarea name="description"></textarea> <br />
+                        <!--
                         Image to upload: <input type="file" name="location" /> <br />
+                        -->
                         <input type="submit" value="Add Location"/><br />
                     </form>
+                    
+                    <hr />
+                        <a data-th-href="@{/files}">Upload a File</a>
+                    <hr />
 
                     <hr />
                     <form data-th-action="@{/logout}" method="post">
