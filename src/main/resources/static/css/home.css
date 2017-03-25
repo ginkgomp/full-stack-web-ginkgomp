@@ -1,4 +1,7 @@
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  right: 3;  
+}
 
-.carousel-control-next{
-    position: relative;
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  left: 0; 
 }
