@@ -47,17 +47,19 @@ public class LocationsController {
     }
 
     @RequestMapping(value = "locations/{id}", method = RequestMethod.DELETE)
-	public ModelAndView delete(@PathVariable("id") long id) {
-		repository.delete(id);
-		return new ModelAndView("locations", "locations", repository.findAll());
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+	public void delete(@PathVariable("id") long id) {
+    	repository.delete(id);
+
 	}
     
     @RequestMapping(value = "locations/{id}", method = RequestMethod.PUT)
-	public ModelAndView update(@RequestBody Location location, @PathVariable("id") long id) throws IOException {
-		if (id != location.getId()) {
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+	@Transactional
+	public void update(@RequestBody Location updatedlocation, @PathVariable("id") long id) throws IOException {
+		if (id != updatedlocation.getId()) {
 			repository.delete(id);
 		}
-		repository.save(location);
-		return new ModelAndView("locations", "locations", repository.findAll());
+		repository.save(updatedlocation);
 	}
 }

@@ -14,4 +14,8 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  * @author Wenwen Sun
  */
-public interface LocationRepository extends CrudRepository<Location, Long> {}
+public interface LocationRepository extends CrudRepository<Location, Long> {
+	
+	
+	
+}
