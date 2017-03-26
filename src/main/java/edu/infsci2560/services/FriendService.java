@@ -59,6 +59,10 @@ public class FriendService {
     
     @RequestMapping(method=RequestMethod.PUT, value="/{id}")
     public Friend update(@PathVariable Long id, @RequestBody Friend friend) {
-    return null;
+    	Friend update = repository.findOne(id);
+        update.setPetName(friend.getPetName());
+        update.setPetBreed(friend.getPetBreed());
+        update.setPetAge(friend.getPetAge());
+        return repository.save(update);
     }
 }
