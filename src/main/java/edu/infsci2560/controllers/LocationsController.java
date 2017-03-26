@@ -46,14 +46,14 @@ public class LocationsController {
         return new ModelAndView("locations", "locations", repository.findAll());
     }
 
-    @RequestMapping(value = "locations/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "locations/delete/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public ModelAndView delete(@PathVariable("id") long id) {
 		repository.delete(id);
 		return new ModelAndView("locations", "locations", repository.findAll());
 	}
     
-    @RequestMapping(value = "locations/{id}", method = RequestMethod.PUT, consumes = "application/json")
+    @RequestMapping(value = "locations/update/{id}", method = RequestMethod.PUT, consumes = "application/json")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@Transactional
 	public ModelAndView update(@RequestBody Location location, @PathVariable("id") long id) throws IOException {
