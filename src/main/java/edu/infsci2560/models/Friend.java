@@ -101,7 +101,7 @@ public class Friend {
     /**
      * @return the petAge
      */
-    public int getpetAge() {
+    public int getPetAge() {
         return petAge;
     }
 
