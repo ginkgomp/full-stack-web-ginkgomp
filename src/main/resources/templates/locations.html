@@ -70,12 +70,28 @@
                         -->
                         <input type="submit" value="Add Location"/><br />
                     </form>
+                     <hr />
+                    
+                      <h2>Delete a location:</h2>
+                      <form data-th-action="@{/locations/delete}" name="deleteLocationForm" method="delete">
+                         id for delete: <input type="text" name="id" /><br /> 
+                       <input type="submit" value="Delete"/>
+                      </form>
                     
                     <hr />
+                      <h2>Update a location:</h2>
+                        <form data-th-action="@{/locations/put}" name="updateLocationForm" method="put">
+                         id for update: <input type="text" name="id" /><br /> 
+                         Location Name: <input type="text" name="locationName" /><br />
+                       <input type="submit" value="Update"/>
+                      </form>
+                    <!--
+                   
                         <a data-th-href="@{/files}">Upload a File</a>
                     
-
+                    -->
                     <hr />
+
                     <form data-th-action="@{/logout}" method="post">
                         <input type="submit" value="Sign Out"/>
                     </form>
@@ -83,11 +99,10 @@
                     <br/>
                 </div> 
             </div>
-            <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
-          <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
-        </footer>
+            
     </div>
    
     </body>
+   
 </html>
 
