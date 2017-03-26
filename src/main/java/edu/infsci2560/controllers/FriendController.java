@@ -44,5 +44,16 @@ public class FriendController {
         }
         return new ModelAndView("friends", "friends", repository.findAll());
     }
+    
+    @RequestMapping(value = "friends/update", method = RequestMethod.GET)
+    public ModelAndView update(@RequestParam(value="id", required=true) @RequestBody Friend friend, Long id) {
+    	Friend update = repository.findOne(id);
+    	if ( update != null ) {
+    		update.setPetName(friend.getPetName());
+            update.setPetBreed(friend.getPetBreed());
+            update.setPetAge(friend.getPetAge());
+        }
+        return new ModelAndView("friends", "friends", repository.findAll());
+    }
 
 }
