@@ -33,7 +33,7 @@ public class FriendController {
     
     @RequestMapping(value = "friends/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) {        
-        return new ModelAndView("friends", "friendss", repository.findOne(id));
+        return new ModelAndView("friends", "friends", repository.findOne(id));
     }
 
     @RequestMapping(value = "friends/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
@@ -51,18 +51,6 @@ public class FriendController {
         return new ModelAndView("friends", "friends", repository.findAll());
     }
     
-    @RequestMapping(value = "friends/update/{id}", method = RequestMethod.GET)
-    public ModelAndView indexByid(@PathVariable Long id) { 
-        Friend friend = repository.findOne(id);
-        return new ModelAndView("friendsUpdate", "friend", friend);
-    }
-    
-    
-    @RequestMapping(value = "friends/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    	public String update( @Valid Friend friend, BindingResult result) {
-            repository.save(friend);
-            return "redirect:/friends";
-        }  
     
     
 
