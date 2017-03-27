@@ -1,5 +1,7 @@
 package edu.infsci2560.models;
 
+import java.net.URL;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +24,7 @@ public class Friend {
     protected String petName;
     protected String petBreed;
     protected String petAge;
+    protected URL imageUrl;
 
 
     public Friend() {
@@ -29,19 +32,21 @@ public class Friend {
         this.petName = null;
         this.petBreed = null;
         this.petAge = null;
+        this.imageUrl = null;
     }
 
-    public Friend(Long id, String petName, String petBreed, String petAge) {
+    public Friend(Long id, String petName, String petBreed, String petAge, URL imageUrl) {
       this.id = id;
       this.petName = petName;
       this.petBreed = petBreed;
       this.petAge = petAge;
+      this.imageUrl = imageUrl;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", petName=" + this.petName + ", petBreed=" + this.petBreed +  ", petAge=" + this.petAge + " ]";
+        return "[ id=" + this.id + ", petName=" + this.petName + ", petBreed=" + this.petBreed +  ", petAge=" + this.petAge + ", imageUrl=" + this.imageUrl + " ]";
        
     }
 
@@ -111,5 +116,15 @@ public class Friend {
     public void setPetAge(String petAge) {
         this.petAge = petAge;
     }
+
+	public URL getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(URL imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+    
+    
 
  }
