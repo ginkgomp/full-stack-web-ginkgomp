@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -46,7 +47,7 @@ public class FriendController {
     }
     
     @RequestMapping(value = "friends/update/{id}", method = RequestMethod.PUT)
-    public ModelAndView update(@RequestParam(value="id", required=true) @RequestBody Friend friend, Long id) {
+    public ModelAndView update(@RequestBody Friend friend, @PathVariable("id") long id) {
     	Friend update = repository.findOne(id);
     	if ( update != null ) {
     		update.setPetName(friend.getPetName());
