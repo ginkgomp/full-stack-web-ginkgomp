@@ -36,7 +36,7 @@
                       <ul class="media-list">  
                           <li class="media" data-th-each="location : ${locations}">
                           <div class="media-left">
-                           <img class="media-object img-thumbnail" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" alt="images" width="200px"/>
+                           <img class="media-object img-thumbnail" data-th-src="${location.imageName}" alt="${location.locationName}" width="200px"/>
                           </div>      
                           <div class="media-body">
                               <h3 class="media-heading" data-th-text="${location.locationName}"></h3>
@@ -65,9 +65,7 @@
                         <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
                         Provide Address: <input type="text" name="address" /> <br />
                         Provide Description: <textarea name="description"></textarea> <br />
-                        <!--
-                        Image to upload: <input type="file" name="location" /> <br />
-                        -->
+                        Image Url: <input type="url" name="imageName" placeholder="http://"/> <br />
                         <input type="submit" value="Add Location"/><br />
                     </form>
                      <hr />
@@ -79,15 +77,6 @@
                       </form>
                     
                     <hr />
-                      <h2>Update a location:</h2>
-                        <form data-th-action="@{/locations/put}" name="updateLocationForm" method="put">
-                         id for update: <input type="text" name="id" /><br /> 
-                         Location Name: <input type="text" name="locationName" /><br />
-                       <input type="submit" value="Update"/>
-                        </form>
-                    <br />
-                    
-                    
                    
                         <a data-th-href="@{/files}">Upload a File</a>
                                                   
