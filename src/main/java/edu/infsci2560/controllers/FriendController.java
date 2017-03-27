@@ -45,7 +45,7 @@ public class FriendController {
         return new ModelAndView("friends", "friends", repository.findAll());
     }
     
-    @RequestMapping(value = "friends/update", method = RequestMethod.GET)
+    @RequestMapping(value = "friends/update", method = RequestMethod.PUT)
     public ModelAndView update(@RequestParam(value="id", required=true) @RequestBody Friend friend, Long id) {
     	Friend update = repository.findOne(id);
     	if ( update != null ) {
