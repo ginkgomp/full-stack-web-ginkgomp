@@ -21,17 +21,17 @@ public class Friend {
     protected Long id;
     protected String petName;
     protected String petBreed;
-    protected int petAge;
+    protected String petAge;
 
 
     public Friend() {
         this.id = Long.MAX_VALUE;
         this.petName = null;
         this.petBreed = null;
-        this.petAge = 0;
+        this.petAge = null;
     }
 
-    public Friend(Long id, String petName, String petBreed, int petAge) {
+    public Friend(Long id, String petName, String petBreed, String petAge) {
       this.id = id;
       this.petName = petName;
       this.petBreed = petBreed;
@@ -101,14 +101,14 @@ public class Friend {
     /**
      * @return the petAge
      */
-    public int getPetAge() {
+    public String getPetAge() {
         return petAge;
     }
 
     /**
      * @param content the content to set
      */
-    public void setPetAge(int petAge) {
+    public void setPetAge(String petAge) {
         this.petAge = petAge;
     }
 
