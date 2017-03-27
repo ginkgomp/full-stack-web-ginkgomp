@@ -47,7 +47,7 @@
                     <td data-th-text="${friend.petName}"></td>
                     <td data-th-text="${friend.petBreed}"></td>
                     <td data-th-text="${friend.petAge}"></td>
-                    <td><a href="#" data-th-href="@{/friends/update/} + ${friend.id}">Edit</a></td>
+                    <td><a href="#" data-th-href="@{/friends/update/{id}(id=${friend.id})}">Edit</a></td>
                 </tr>
             </table>
             
