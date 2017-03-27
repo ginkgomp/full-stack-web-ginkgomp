@@ -51,8 +51,8 @@ public class FullStackWebApplication {
         repositorye.save(new Event(3L,"Two Years Old","2017-03-07","They turn to two while are as cute as the little puppies first brought into our family"));
         		
         FriendRepository repositoryf = ctx.getBean(FriendRepository.class);
-        repositoryf.save(new Friend(1L,"Genki","Husky","3","husky.jpg"));
-        repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","samoyed.jpg"));
+        repositoryf.save(new Friend(1L,"Genki","Husky","3","https://goo.gl/images/L0QiVw"));
+        repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","https://goo.gl/images/L0QiVw"));
         
         
         
