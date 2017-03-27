@@ -57,7 +57,7 @@ public class FileUploadController {
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
 
-        return "redirect:/files";
+        return "redirect:/locations";
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)
