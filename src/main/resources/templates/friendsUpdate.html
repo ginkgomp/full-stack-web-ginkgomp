@@ -5,7 +5,7 @@
     </head>
     <body>
         Update a Friend: <br />
-        <form method="put" data-th-action="@{/friends/update}" data-th-object="${friend}">
+        <form method="put" data-th-action="@{/friends/update/{id}}" data-th-object="${friend}">
             Pet Name: <input type="text" name="petName" data-th-value="${friend.petName}" /><br />
             Pet Breed: <input type="text" name="petBreed" data-th-value="${friend.petBreed}" /><br />
             Pet Age: <input type="text" name="petAge" data-th-value="${friend.petAge}" /><br />
