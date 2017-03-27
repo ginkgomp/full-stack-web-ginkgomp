@@ -22,7 +22,7 @@ public class BlogUpdateController {
 	@RequestMapping(value = "blogs/update/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Blog blog = repository.findOne(id);
-        return new ModelAndView("blogsUpdate", "blogs", blog);
+        return new ModelAndView("blogsUpdate", "blog", blog);
     }
     
     

@@ -2,6 +2,7 @@ package edu.infsci2560.controllers;
 
 import java.io.IOException;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import edu.infsci2560.models.Location;
 import edu.infsci2560.repositories.LocationRepository;
+
+
 @Controller
 public class LocationUpdateController {
 	
@@ -25,7 +28,7 @@ public class LocationUpdateController {
 	@RequestMapping(value = "locations/update/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Location location = repository.findOne(id);
-        return new ModelAndView("locationsUpdate", "locations", location);
+        return new ModelAndView("locationsUpdate", "location", location);
     }
     
     @RequestMapping(value = "locations/update/{id}", method = RequestMethod.PUT)
