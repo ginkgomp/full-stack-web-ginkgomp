@@ -24,7 +24,7 @@ public class Friend {
     protected String petName;
     protected String petBreed;
     protected String petAge;
-    protected URL imageUrl;
+    protected String imageName;
 
 
     public Friend() {
@@ -32,21 +32,21 @@ public class Friend {
         this.petName = null;
         this.petBreed = null;
         this.petAge = null;
-        this.imageUrl = null;
+        this.imageName = null;
     }
 
-    public Friend(Long id, String petName, String petBreed, String petAge, URL imageUrl) {
+    public Friend(Long id, String petName, String petBreed, String petAge, String imageName) {
       this.id = id;
       this.petName = petName;
       this.petBreed = petBreed;
       this.petAge = petAge;
-      this.imageUrl = imageUrl;
+      this.imageName = imageName;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", petName=" + this.petName + ", petBreed=" + this.petBreed +  ", petAge=" + this.petAge + ", imageUrl=" + this.imageUrl + " ]";
+        return "[ id=" + this.id + ", petName=" + this.petName + ", petBreed=" + this.petBreed +  ", petAge=" + this.petAge + ", imageName=" + this.imageName + " ]";
        
     }
 
@@ -117,12 +117,12 @@ public class Friend {
         this.petAge = petAge;
     }
 
-	public URL getImageUrl() {
-		return imageUrl;
+	public String getImageName() {
+		return imageName;
 	}
 
-	public void setImageUrl(URL imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
     
     

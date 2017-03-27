@@ -41,12 +41,14 @@
                     <th>pet name</th>
                     <th>pet breed</th>
                     <th>pet age</th>
+                    <th>Images</th>
                 </tr>                
                 <tr data-th-each="friend : ${friends}">
                     <td data-th-text="${friend.id}"></td>
                     <td data-th-text="${friend.petName}"></td>
                     <td data-th-text="${friend.petBreed}"></td>
                     <td data-th-text="${friend.petAge}"></td>
+                    <td><img data-th-src="@{/image/${friend.imageName}}"/></td>
                     <td><a href="#" data-th-href="@{/friends/update/{id}(id=${friend.id})}">Edit</a></td>
                 </tr>
             </table>
