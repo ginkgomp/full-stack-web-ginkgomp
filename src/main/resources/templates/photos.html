@@ -68,7 +68,7 @@
                         <div class="col-xs-10 row tlcontainer" data-th-each="photo :${photos}" data-th-attr="data-date=${photo.eventDate}">   
                           
                                 <div class="col-xs-4">
-                                 <img data-th-src="@{/image/{imageName}(imageName=${photo.imageName})}" class="image" data-th-alt="${photo.eventTitle}" width="50%" />
+                                 <img data-th-src="@{/image/{imageName}(imageName=${photo.imageName})}" class="image" data-th-alt="${photo.eventTitle}" width="100%" />
                                 </div>
                                 <div class="col-xs-8">
                                   <p class="eventTitle" data-th-text="${photo.eventTitle}"></p><br/>
