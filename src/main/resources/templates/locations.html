@@ -39,7 +39,7 @@
                            <img class="media-object img-thumbnail" data-th-src="${location.imageName}" alt="${location.locationName}" width="200px"/>
                           </div>      
                           <div class="media-body">
-                              <h3 class="media-heading" data-th-text="${location.locationName}"></h3>
+                              <h3 class="media-heading" data-th-text="${location.locationName}" style="display:inline-block"></h3> <small data-th-text="${location.id}"></small>
                                   <small data-th-text="${location.locationType}"></small>
                             <p data-th-text="${location.address}"></p>
                             <p data-th-text="${location.description}"></p>  
@@ -92,6 +92,9 @@
                 </div> 
             </div>
             
+          <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
+          <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
+        </footer>  
     </div>
    
     </body>

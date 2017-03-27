@@ -41,7 +41,7 @@
 
                 <div class="col-xs-10" id="blogsidebar">
                     <li data-th-each="blog :${blogs}">
-                    <h2 data-th-text="${blog.title}"><small data-th-text="${blog.id}"></small></h2>
+                    <h2 data-th-text="${blog.title}" style="display:inline-block"></h2> <small data-th-text="${blog.id}"></small>
                 <p class="lead" data-th-text="${blog.author}"></p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
                 <hr/>
