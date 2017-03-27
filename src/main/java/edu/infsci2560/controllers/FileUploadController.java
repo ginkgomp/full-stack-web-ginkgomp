@@ -37,7 +37,7 @@ public class FileUploadController {
                                 .fromMethodName(FileUploadController.class, "serveFile", path.getFileName().toString())
                                 .build().toString())
                 .collect(Collectors.toList()));
-        return new ModelAndView("locations");
+        return new ModelAndView("files");
     }
 
     @RequestMapping(value = "files/{filename:.+}", method = RequestMethod.GET)
