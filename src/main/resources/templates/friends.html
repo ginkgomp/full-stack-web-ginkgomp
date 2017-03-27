@@ -48,7 +48,7 @@
                     <td data-th-text="${friend.petName}"></td>
                     <td data-th-text="${friend.petBreed}"></td>
                     <td data-th-text="${friend.petAge}"></td>
-                    <td><img data-th-src="@{/image/{imageName}(imageName=${friend.imageName})}" width="200px"/></td>
+                    <td><img data-th-src="@{/image/{imageName}(imageName=${friend.imageName})}" width="100px"/></td>
                     <td><a href="#" data-th-href="@{/friends/update/{id}(id=${friend.id})}">Edit</a></td>
                 </tr>
             </table>
@@ -64,9 +64,9 @@
                         <input type="text" name="petBreed" /> <br />
                         <label for="petAge">Age:</label>
                        <input type="text" name="petAge" /> <br />
-                        <!--
-                        Image to upload: <input type="file" name="location" /> <br />
-                        -->
+                        
+                        Image to upload: <input type="file" name="imageName" /> <br />
+                        
                         <input type="submit" value="Add new friend"/><br />
                     </form>
                     
