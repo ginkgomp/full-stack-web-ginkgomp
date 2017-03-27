@@ -36,7 +36,7 @@
                       <ul class="media-list">  
                           <li class="media" data-th-each="location : ${locations}">
                           <div class="media-left">
-                           <img class="media-object img-thumbnail" data-th-src="" alt="images" width="200px"/>
+                           <img class="media-object img-thumbnail" data-th-src="/image/Hueston_Woods_Dog_Camping.jpg" alt="images" width="200px"/>
                           </div>      
                           <div class="media-body">
                               <h3 class="media-heading" data-th-text="${location.locationName}"></h3>
@@ -90,20 +90,8 @@
                     
                    
                         <a data-th-href="@{/files}">Upload a File</a>
-                    <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                
-<!--            <form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                -->
-                image to upload:<input type="file" name="file" /><br />
-                <input type="submit" value="Upload" />
-                        
-                        <div>
-            <ul>
-                <li data-th-each="file : ${files}">
-                    <img data-th-src="${file}" />
-                </li>
+                                                  
                 
-            </ul>
-        </div>
-            </form>
                     
                     <hr />
 
