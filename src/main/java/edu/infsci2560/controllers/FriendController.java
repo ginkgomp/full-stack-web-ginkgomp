@@ -52,7 +52,7 @@ public class FriendController {
     }
     
     @RequestMapping(value = "friends/update/{id}", method = RequestMethod.GET)
-    public ModelAndView index1(@PathVariable Long id) { 
+    public ModelAndView indexByid(@PathVariable Long id) { 
         Friend friend = repository.findOne(id);
         return new ModelAndView("friendsUpdate", "friend", friend);
     }
