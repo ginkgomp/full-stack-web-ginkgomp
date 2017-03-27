@@ -52,17 +52,5 @@ public class BlogController {
         return new ModelAndView("blogs", "blogs", repository.findAll());
     }
 
-    @RequestMapping(value = "blogs/update/{id}", method = RequestMethod.GET)
-    public ModelAndView index1(@PathVariable Long id) { 
-        Blog blog = repository.findOne(id);
-        return new ModelAndView("blogsUpdate", "blogs", blog);
-    }
-    
-    
-    @RequestMapping(value = "blogs/update/{id}", method = RequestMethod.PUT, produces = "application/json")
-    	public String update( @Valid Blog blog, BindingResult result) {
-            repository.save(blog);
-            return "redirect:/blogs";
-        }  
     
 }

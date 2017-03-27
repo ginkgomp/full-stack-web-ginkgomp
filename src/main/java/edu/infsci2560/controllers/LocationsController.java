@@ -52,10 +52,6 @@ public class LocationsController {
         return new ModelAndView("locations", "locations", repository.findAll());
     }
     
-    @RequestMapping(value = "locations/{id}", method = RequestMethod.GET)
-    public ModelAndView index1(@PathVariable Long id) {        
-        return new ModelAndView("locations", "locations", repository.findOne(id));
-    }
 
     @RequestMapping(value = "locations/delete", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -64,19 +60,5 @@ public class LocationsController {
 
 	}
     
-    @RequestMapping(value = "locations/update/{id}", method = RequestMethod.GET)
-    public ModelAndView index2(@PathVariable Long id) { 
-        Location location = repository.findOne(id);
-        return new ModelAndView("locationsUpdate", "locations", location);
-    }
     
-    @RequestMapping(value = "locations/update/{id}", method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-	@Transactional
-	public void update(@RequestBody Location updatedlocation, @PathVariable("id") long id) throws IOException {
-		if (id != updatedlocation.getId()) {
-			repository.delete(id);
-		}
-		repository.save(updatedlocation);
-	}
 }
