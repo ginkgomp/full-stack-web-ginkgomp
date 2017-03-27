@@ -5,6 +5,7 @@
  */
 package edu.infsci2560.controllers;
 
+import edu.infsci2560.models.Blog;
 import edu.infsci2560.models.Location;
 import edu.infsci2560.repositories.LocationRepository;
 
@@ -39,6 +40,11 @@ public class LocationsController {
     public ModelAndView index() {
         return new ModelAndView("locations", "locations", repository.findAll());
     }
+    
+    @RequestMapping(value = "locations/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("locations", "locations", repository.findOne(id));
+    }
 
     @RequestMapping(value = "locations/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Location location, BindingResult result) {
@@ -47,18 +53,24 @@ public class LocationsController {
     }
     
     @RequestMapping(value = "locations/{id}", method = RequestMethod.GET)
-    public ModelAndView index(@PathVariable Long id) {        
+    public ModelAndView index1(@PathVariable Long id) {        
         return new ModelAndView("locations", "locations", repository.findOne(id));
     }
 
-    @RequestMapping(value = "locations/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "locations/delete", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable("id") long id) {
     	repository.delete(id);
 
 	}
     
-    @RequestMapping(value = "locations/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "locations/update/{id}", method = RequestMethod.GET)
+    public ModelAndView index2(@PathVariable Long id) { 
+        Location location = repository.findOne(id);
+        return new ModelAndView("locationsUpdate", "locations", location);
+    }
+    
+    @RequestMapping(value = "locations/update/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
 	@Transactional
 	public void update(@RequestBody Location updatedlocation, @PathVariable("id") long id) throws IOException {
