@@ -46,15 +46,17 @@ public class FriendController {
         return new ModelAndView("friends", "friends", repository.findAll());
     }
     
-    @RequestMapping(value = "friends/update/{id}", method = RequestMethod.PUT)
-    public ModelAndView update(@RequestBody Friend friend, @PathVariable("id") long id) {
-    	Friend update = repository.findOne(id);
-    	if ( update != null ) {
-    		update.setPetName(friend.getPetName());
-            update.setPetBreed(friend.getPetBreed());
-            update.setPetAge(friend.getPetAge());
-        }
-        return new ModelAndView("friends", "friends", repository.findAll());
+    @RequestMapping(value = "friends/update/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) { 
+        Friend friend = repository.findOne(id);
+        return new ModelAndView("friendUpdate", "friend", friend);
     }
+    
+    
+    @RequestMapping(value = "friends/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    	public String update( @Valid Friend friend, BindingResult result) {
+            repository.save(friend);
+            return "redirect:/friends";
+        }  
 
 }
