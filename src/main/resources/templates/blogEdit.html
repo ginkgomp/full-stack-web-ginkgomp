@@ -11,10 +11,9 @@
             Content:: <input type="text" name="content" data-th-value="${blog.content}" /><br />
             Image URL: <input type="url" name="imageName" placeholder="http://" data-th-value="${blog.imageName}"/><br />
             <input type="submit" value="Update a Post"/><br />
-           
+           <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
-        <form method="post" action="doUpload?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data">
-        </form>
+ 
         
     </body>
 </html>
