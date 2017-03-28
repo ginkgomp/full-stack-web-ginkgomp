@@ -19,14 +19,14 @@ public class FriendUpdateController {
 	@Autowired
     private FriendRepository repository;
 	
-	@RequestMapping(value = "friends/edit/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "friends/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Friend friend = repository.findOne(id);
-        return new ModelAndView("friendsEdit", "friend", friend);
+        return new ModelAndView("friendsEdit", "friends", friend);
     }
     
     
-    @RequestMapping(value = "friends/edit/{id}", method = RequestMethod.PUT, produces = "application/json")
+    @RequestMapping(value = "friends/{id}", method = RequestMethod.PUT, produces = "application/json",consumes="application/x-www-form-urlencoded")
     	public String update( @Valid Friend friend, BindingResult result) {
             repository.save(friend);
             return "redirect:/friends";
