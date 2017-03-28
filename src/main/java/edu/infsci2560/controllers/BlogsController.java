@@ -23,7 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Wenwen Sun
  */
 @Controller
-public class BlogController {
+public class BlogsController {
     @Autowired
     private BlogRepository repository;
 

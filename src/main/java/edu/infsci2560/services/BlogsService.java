@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @RestController
 @RequestMapping("/blogs")
-public class BlogService {
+public class BlogsService {
 
     @Autowired
     private BlogRepository repository;
@@ -46,8 +46,8 @@ public class BlogService {
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Blog> create(@RequestBody Blog blogs) {
+    public ResponseEntity<Blog> create(@RequestBody Blog blog) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(blogs), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(blog), headers, HttpStatus.OK);
     }
 }
