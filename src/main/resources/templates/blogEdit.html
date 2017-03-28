@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="_csrf" content="${_csrf.token}"/>
+        <meta name="_csrf_header" content="${_csrf.headerName}"/>
         <title>Edit Blogs</title>
     </head>
     <body>
         Update a Post: <br />
         <form data-th-method="put" data-th-action="@{/blogs/edit/{id}(id=${blog.id})}" data-th-object="${blog}" role="form">
-            <input type="hidden" data-th-name="${_csrf.parameterName}" data-th-value="${_csrf.token}"/>
+            
             Title:: <input type="text" name="title" data-th-value="${blog.title}" /><br />
             Author: <input type="text" name="author" data-th-value="${blog.author}" /><br />
             Content:: <input type="text" name="content" data-th-value="${blog.content}" /><br />
