@@ -22,7 +22,7 @@ public class FriendUpdateController {
 	@RequestMapping(value = "friends/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Friend friend = repository.findOne(id);
-        return new ModelAndView("friendsUpdate", "friend", friend);
+        return new ModelAndView("friendsEdit", "friend", friend);
     }
     
     
