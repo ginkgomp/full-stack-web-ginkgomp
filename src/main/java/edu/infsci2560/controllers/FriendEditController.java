@@ -14,7 +14,7 @@ import edu.infsci2560.models.Friend;
 import edu.infsci2560.repositories.FriendRepository;
 
 @Controller
-public class FriendUpdateController {
+public class FriendEditController {
 	
 	@Autowired
     private FriendRepository repository;
@@ -22,7 +22,7 @@ public class FriendUpdateController {
 	@RequestMapping(value = "friends/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Friend friend = repository.findOne(id);
-        return new ModelAndView("friendsEdit", "friends", friend);
+        return new ModelAndView("friendsEdit", "friend", friend);
     }
     
     

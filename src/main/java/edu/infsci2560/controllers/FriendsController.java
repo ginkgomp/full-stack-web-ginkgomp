@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Wenwen Sun
  */
 @Controller
-public class FriendController {
+public class FriendsController {
     @Autowired
     private FriendRepository repository;
 
