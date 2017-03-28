@@ -27,10 +27,10 @@ public class LocationEditController {
 	@Autowired
     private LocationRepository repository;
 	
-	@RequestMapping(value = "locations/update/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "locations/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Location location = repository.findOne(id);
-        return new ModelAndView("locationsEdit", "location", location);
+        return new ModelAndView("locationEdit", "location", location);
     }
     
     @RequestMapping(value = "locations/edit/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")

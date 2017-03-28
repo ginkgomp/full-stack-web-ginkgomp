@@ -53,12 +53,15 @@ public class LocationsController {
     }
     
 
-    @RequestMapping(value = "locations/delete", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-	public void delete(@PathVariable("id") long id) {
-    	repository.delete(id);
+    @RequestMapping(value = "locations/delete", method = RequestMethod.GET)
+    public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
+        Location location = repository.findOne(id);  
+        if ( location != null ) {
+            repository.delete(id);
+        }
+        return new ModelAndView("locations", "locations", repository.findAll());
+    }
 
-	}
     
     
 }
