@@ -10,12 +10,15 @@ import edu.infsci2560.repositories.BlogRepository;
 import edu.infsci2560.repositories.EventRepository;
 import edu.infsci2560.repositories.FriendRepository;
 
+import java.util.Arrays;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 
@@ -54,12 +57,13 @@ public class FullStackWebApplication {
         repositoryf.save(new Friend(1L,"Genki","Husky","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
         repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
         
-        
+       
+    
         
     }
 
 
-//    @Bean
+//   @Bean
 //    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 //        return args -> {
 //
