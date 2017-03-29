@@ -55,8 +55,7 @@ public class FullStackWebApplication {
         		
         FriendRepository repositoryf = ctx.getBean(FriendRepository.class);
         repositoryf.save(new Friend(1L,"Genki","Husky","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
-        repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
-        
+        repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","https://i2.wp.com/www.russiandog.net/wp-content/uploads/2015/11/smiling-sammy-samoyed.jpg?resize=333%2C368"));
        
     
         
