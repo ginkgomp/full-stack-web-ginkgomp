@@ -25,10 +25,10 @@
            <div class="row">
             <div class="col-xs-3">
                <div class="card" style="width: 20rem;">
-                <img class="card-img-top" data-th-src="@{/image/{imageName}(imageName=${accounts.icon})}" width="200" alt="username" />
+                <img class="card-img-top" data-th-src="@{/image/{icon}(icon=${account.icon})}" width="200" alt="username" />
                 <div class="card-block">
-                  <h4 class="card-title" data-th-text="${accounts.name}"></h4>
-                   <small class="card-text" data-th-text="${accounts.intro}"></small>            
+                  <h4 class="card-title" data-th-text="${account.name}"></h4>
+                   <small class="card-text" data-th-text="${account.intro}"></small>            
                 </div>  
                 <div class="list-group list-group-flush">
                   <button class="list-group-item button btn btn-outline-primary btn-sm" type="submit">Follow</button>   
