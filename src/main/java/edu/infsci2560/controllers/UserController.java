@@ -13,7 +13,7 @@ public class UserController {
 	
    @RequestMapping(value = "account", method = RequestMethod.GET)
    public ModelAndView index() {
-       return new ModelAndView("account", "account", repository.findAll());
+       return new ModelAndView("account", "user", repository.findAll());
    }
 
 }
