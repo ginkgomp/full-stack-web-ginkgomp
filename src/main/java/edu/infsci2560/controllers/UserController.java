@@ -11,9 +11,9 @@ public class UserController {
 	@Autowired
     private UserRepository repository;
 	
-   @RequestMapping(value = "account", method = RequestMethod.GET)
+   @RequestMapping(value = "accounts", method = RequestMethod.GET)
    public ModelAndView index() {
-       return new ModelAndView("account", "account", repository.findAll());
+       return new ModelAndView("accounts", "accounts", repository.findAll());
    }
 
 }
