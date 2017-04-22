@@ -5,7 +5,9 @@ import edu.infsci2560.models.Blog;
 import edu.infsci2560.models.Event;
 import edu.infsci2560.models.Friend;
 import edu.infsci2560.models.Location.LocationType;
+import edu.infsci2560.models.User;
 import edu.infsci2560.repositories.LocationRepository;
+import edu.infsci2560.repositories.UserRepository;
 import edu.infsci2560.repositories.BlogRepository;
 import edu.infsci2560.repositories.EventRepository;
 import edu.infsci2560.repositories.FriendRepository;
@@ -57,8 +59,8 @@ public class FullStackWebApplication {
         repositoryf.save(new Friend(1L,"Genki","Husky","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
         repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","https://i2.wp.com/www.russiandog.net/wp-content/uploads/2015/11/smiling-sammy-samoyed.jpg?resize=333%2C368"));
        
-    
-        
+        UserRepository repositoryu = ctx.getBean(UserRepository.class);
+        repositoryu.save(new User(1L,"user","Love pets!","https://az616578.vo.msecnd.net/files/responsive/cover/main/desktop/2016/02/15/6359109700410917201731765445_BEAGLE%20PUPPY.jpg")); 
     }
 
 
