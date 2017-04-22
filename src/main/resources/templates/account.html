@@ -24,7 +24,7 @@
 
            <div class="row">
             <div class="col-xs-3">
-               <div class="card" style="width: 20rem;">
+               <div class="card" style="width: 20em;" data-th-each="account :${accounts}">
                 <img class="card-img-top" data-th-src="${account.icon}" width="200" alt="username" />
                 <div class="card-block">
                   <h4 class="card-title" data-th-text="${account.name}"></h4>
