@@ -75,7 +75,7 @@
                   <hr/>
                   <div class="col-xs-12">
                   <h2>Email Us</h2>
-                    <form data-th-action="thankyou.html" method="get" name="comment_form" id="comment_form">   
+                    <form data-th-action="@{/thankyou}" method="get" name="comment_form" id="comment_form">   
                     <fieldset>
                     <label>Last Name: <input type="text" name="lastname" size="20" maxlength="50"/></label>
                     <label>First Name: <input type="text" name="firstname" size="20" maxlength="50"/></label><br />
@@ -96,7 +96,7 @@
                         <label for="enter comments"> Enter Comments:   (500 characters maxmium)</label><br />
                         <textarea rows="5" cols="50" id="comments"></textarea>
                     </p>
-                        <input type="submit" value="SUBMIT" />
+                        <input type="submit" value="Submit"/>
                     </fieldset>
                     </form>
         
